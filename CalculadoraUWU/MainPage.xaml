@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraUWU.MainPage">
+
+    <StackLayout>
+        <StackLayout>
+            <Label Text="CALCULAR IMC Y FCN" HorizontalOptions="Center" VerticalOptions="Center" FontSize="25" FontAttributes="Bold" TextColor="Black"/>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Puedes seleccionar entre calcular indicie de Masa Corporal(IMC) y tu Frecuencia Cardiaca Normal(FCN)" TextColor="Black" Margin="40,20,0,0"></Label>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Opciones" Margin="0,20,0,0" TextColor="Black" FontAttributes="Bold" FontSize="20"></Label>
+        </StackLayout>
+        <StackLayout>
+        <Grid Margin="30,0,0,0">
+            <RadioButton Content="IMC"/>
+            <RadioButton Content="FCN" Grid.Column="1"/>
+        </Grid>
+        </StackLayout>
+            <Label Text="Proporcionar datos" FontAttributes="Bold" TextColor="Black" Margin="20,0,0,0" FontSize="15"/>
+        <Grid>
+            <Label Text="Cuenta tus latidos por 15 segundos" Margin="20,0,0,0" IsVisible="false"></Label>
+                <Entry Text="Latidos" IsVisible="false" Margin="50,0,0,0"/>
+                <Entry Placeholder="Peso" x:Name="Peso" Margin="50,0,0,0" Text="{Binding Peso}"></Entry>
+                <Entry Placeholder="Altura" x:Name="Altura" Grid.Column="1" Margin="0,0,50,0" Text="{Binding Altura}"></Entry>
+            <Button x:Name="Calcular"  Command="{Binding BtnCalcularIMCCommand}" Grid.Row="2" Grid.Column="1"  WidthRequest="1" HeightRequest="1" CornerRadius="5" Margin="20,0,20,0"/>
+            
+        </Grid>
+        <Image Source="https://i.ibb.co/bLQfnHd/comprobar-2.png" IsVisible="False"/>
+        <Image Source="https://i.ibb.co/6ntrv8d/crisis-2.png" IsVisible="false"/>
+
+
+    </StackLayout>
+</ContentPage>
+
+
